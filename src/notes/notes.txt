@@ -1,0 +1,47 @@
+CORE CONCEPT IN REACT --components
+components are building blocks - u can create them ang then combine  them to build a REACT app
+components can be reused --reuseable building blocks
+ in a components related code is kept together -relate code is kept together
+-different components handle different logic and data --simplifies the working on complex apps
+JSX & REACT COMPONENTS
+jsx CALled as javascript syntax extension -is used to describe and create HTML elements in javascript in a declarative way
+components are just functions of JS
+jsx code is not supported by browsers.
+react projects come with a build process that transforms(internally) JSX code into code that does work on browsers
+A COMPONENT  in react must follow 2 rules to be recognised as a component by the react
+1.function name must start with a captial letter
+2.it must return a renderable content like return { <div></div>} (a html markup).
+CREATING A FIRST CUSTOM COMPONENT
+just write a normal js function starting with a captial letter
+now if you return a multi line html content then u need to use ();
+normally we execute js functions as Header() but here this component it is executed by react-library
+we can use the component like a html tag <Header></Header> to use it or self-closing <Header /> "/" is must 
+in image tag also <img src="cd" />
+HOW REACT HANDLES COMPONENTS AND BUILDS A COMPONENT TREE 
+when you inspect the webiste source code - we dont find any header or data or image all we see is
+some metadata and one js file imported or loaded -the index.js file this file -is the key 
+because the code that is loaded and executed here in the index.js file -is the transformed that we wrote
+it is transformed
+index.html file is served to the visitors of the webiste which has index.js import and this index.js has 
+the import--import App from "./App.jsx";
+it imports the app components as it is exported --export default App;
+import,export --are js features not react specific
+---in detail in the video but the app component is rendered in the root div of the index.html file with the help of the 
+react-dom library
+App component may contain as many  nested components as needed
+as nested components(Header component) can contain even more child components
+and with that you end up with a component hierarchy 
+App ── Header
+   │
+   └─ MainContent ── Sidebar
+           │
+           └─ SidebarItem
+   │
+   └─ Content ── PostList
+             │
+             └─ PostItem
+                   │
+                   └─ UserProfile
+the tree of components is ananlysed by react and then combined give us a dom 
+to tell react that it is a CUSTOM component and not a built in component -we need togive a captial starting letter
+eg: function Header :<Header /> and <header> </header>
