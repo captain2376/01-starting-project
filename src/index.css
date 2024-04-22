@@ -148,3 +148,13 @@ main h2 {
 #tab-content code {
   font-size: 1rem;
 }
+
+.footer{
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(10, 12, 131, 0.507);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

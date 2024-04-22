@@ -1,4 +1,4 @@
-CORE CONCEPT IN REACT --components
+CORE CONCEPT IN REACT --components :are just javascript function
 components are building blocks - u can create them ang then combine  them to build a REACT app
 components can be reused --reuseable building blocks
  in a components related code is kept together -relate code is kept together
@@ -45,3 +45,16 @@ App ── Header
 the tree of components is ananlysed by react and then combined give us a dom 
 to tell react that it is a CUSTOM component and not a built in component -we need togive a captial starting letter
 eg: function Header :<Header /> and <header> </header>
+--Using & Outputting Dynamic Values [Core Concept]
+{} --using this operator will indicate react that a Dynamic value is being passed.
+also importing an image
+ import reactImg from '../assets/react-core-concepts.png'
+use it in img tag
+ <img src={reactImg} alt="Stylized atom" />
+ donot include {} in " " -quotes::it will create string instead of a Dynamic value
+
+--Making Components Reusable with Props [Core Concept]
+REACT allows you to pass data to components via a concept called "Props"
+-----props concept --44--continue..
+
+
