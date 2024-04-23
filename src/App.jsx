@@ -1,11 +1,13 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import componentsImg from "./assets/components.png"
+import CoreConcepts from "./components/CoreConcepts.jsx";
+import componentsIamge from "./assets/components.png";
+import { CORE_CONCEPTS } from "./data.js";
 /*
 function Header() {
   return (
     <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+      <image src="src/assets/react-core-concepts.png" alt="Stylized atom" />
       <h1>React Essentials</h1>
       <p>
         Fundamental React concepts you will need for almost any app you are
@@ -16,13 +18,7 @@ function Header() {
 }
  */
 
-function CoreConcepts(props){
-  return <li>
-    <img src={props.img} alt="..."/>
-    <h3>{props.title}</h3>
-    <p>{props.description}</p>
-  </li>
-}
+
 
 function App() {
   return (
@@ -32,12 +28,16 @@ function App() {
         <section id="core-concepts">
         <h2>Time to get started!</h2>
         <ul>
-          <CoreConcepts title="Compnente" 
-          description="This is defining props in a component."
-          img={componentsImg}/>
-          <CoreConcepts />
-          <CoreConcepts />
-          <CoreConcepts />
+          <CoreConcepts title={CORE_CONCEPTS[0].title}
+          description={CORE_CONCEPTS[0].description}
+          image={CORE_CONCEPTS[0].image}/>
+          <CoreConcepts {...CORE_CONCEPTS[1]} />
+         <CoreConcepts title={CORE_CONCEPTS[2].title}
+          description={CORE_CONCEPTS[2].description}
+          image={CORE_CONCEPTS[2].image}/>
+          <CoreConcepts title={CORE_CONCEPTS[3].title}
+          description={CORE_CONCEPTS[3].description}
+          image={CORE_CONCEPTS[3].image}/>
         </ul>
         </section>
         
